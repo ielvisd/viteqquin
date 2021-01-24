@@ -3,8 +3,10 @@ import './tailwind.css'
 import App from './App.vue'
 import { routes } from './routes.js'
 import { createRouter, createWebHistory } from 'vue-router'
+import { TroisJSVuePlugin } from "troisjs";
 
 let app = createApp(App)
+app.use(TroisJSVuePlugin);
 
 let router = createRouter({
   history: createWebHistory(),
