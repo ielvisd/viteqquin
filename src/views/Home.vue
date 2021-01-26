@@ -193,21 +193,24 @@ data() {
   flex-direction: row;
   flex-wrap: nowrap;
   border: 3px solid orange;
+  max-width: 800px;
+  margin: 0 auto
 }
 
 .controls-container {
   padding: 12px;
   width: 200px;
-  border: 1px solid blue;
+  border: 5px solid blue;
   min-height: 500px;
 }
 
 .control-container {
   margin-top: 12px;
+  // border: 5px solid green;
 }
 
 .model {
-  border: 2px solid purple;
+  border: 5px solid green;
   width: 100%;
   /* height: 100vh; */
 }
