@@ -55,10 +55,11 @@ export default {
     mannequin.createScene();
     var man = new mannequin.Male();
     this.man = man;
-    man.position.set(this.xposition, this.yposition, 0);
+    console.log("this.xposition is: ", this.xposition);
+    man.position.set(-13, this.yposition, this.xposition);
 
     // overall body position
-    man.position.y = -5;
+    // man.position.y = -5;
     man.bend(20);
 
     // torso and head
@@ -91,7 +92,7 @@ export default {
     man.l_fingers.bend(20);
 
     var man2 = new mannequin.Male();
-    man2.position.set(30, 3.5, 0);
+    man2.position.set(15, 3.5, 0);
     man2.turn(180);
 
     // overall body position
