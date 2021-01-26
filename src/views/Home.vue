@@ -27,8 +27,7 @@
     <div class="controls-container">
       <div class="control-container">
         <label for="toggle_button">
-          <span v-if="!positionControlsActive">Show Position Controls</span>
-          <span v-if="positionControlsActive">Hide Position Controls</span>
+          <span>Position </span>
           <input
             type="checkbox"
             id="toggle_button"
@@ -49,8 +48,7 @@
 
       <div class="control-container">
         <label for="toggle_button">
-          <span v-if="!figureControlsActive">Show Figure Motion Controls</span>
-          <span v-if="figureControlsActive">Hide Figure Motion Controls</span>
+          <span>Body Motion </span>
           <input
             type="checkbox"
             id="toggle_button"
@@ -70,10 +68,9 @@
 
       <div class="control-container">
         <label for="toggle_button">
-          <span v-if="!headMotionControlsActive"
-            >Show Head Motion Controls</span
+          <span
+            >Head Motion </span
           >
-          <span v-if="headMotionControlsActive">Hide Head Motion Controls</span>
           <input
             type="checkbox"
             id="toggle_button"
@@ -88,12 +85,6 @@
           <vue-slider v-model="headTurn" :min="-90" :max="90" :interval="1" />
           <p>tilt: {{ headTilt }}</p>
           <vue-slider v-model="headTilt" :min="-90" :max="90" :interval="1" />
-          <h3>Basic</h3>
-          <!-- <ToggleButton
-            v-model="checked1"
-            onIcon="pi pi-check"
-            offIcon="pi pi-times"
-          /> -->
         </div>
       </div>
     </div>
@@ -118,9 +109,12 @@
 // see the syntax-sugared version in About.vue
 import ButtonRepo from '@/components/ButtonRepo.vue'
 import Stage from '@/components/Stage.vue'
+import VueSlider from "vue-slider-component";
+import 'vue-slider-component/theme/antd.css'
+
 
 export default {
-  components: { ButtonRepo, Stage },
+  components: { ButtonRepo, Stage, VueSlider },
 data() {
     return {
       checked1: false,

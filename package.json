@@ -9,11 +9,14 @@
   },
   "dependencies": {
     "node-sass": "^5.0.0",
+    "primeicons": "^4.1.0",
+    "primevue": "^3.2.0-rc.1",
     "sass-loader": "^10.1.1",
     "three": "^0.124.0",
     "troisjs": "^0.1.0",
     "vue": "^3.0.5",
-    "vue-router": "^4.0.3"
+    "vue-router": "^4.0.3",
+    "vue-slider-component": "^4.0.0-beta.3"
   },
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.2.0",
@@ -26,8 +29,8 @@
     "cross-env": "^7.0.3",
     "local-web-server": "^4.2.1",
     "postcss": "^8.2.4",
+    "sass": "^1.32.5",
     "tailwindcss": "^2.0.2",
-    "vite": "^2.0.0-beta.44",
-    "sass": "^1.32.5"
+    "vite": "^2.0.0-beta.44"
   }
 }
