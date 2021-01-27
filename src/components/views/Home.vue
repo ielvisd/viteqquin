@@ -36,7 +36,6 @@
         </label>
 
         <div v-if="showPositionControls">
-          <h3>Figure Position</h3>
           <p>x-position: {{ xPosition }}</p>
           <vue-slider v-model="xPosition" :min="-50" :max="50" :interval="1" />
           <p>y-position: {{ yPosition }}</p>
@@ -56,7 +55,6 @@
           />
         </label>
         <div v-if="showFigureControls">
-          <h3>Figure Motion</h3>
           <p>bend: {{ bend }}</p>
           <vue-slider v-model="bend" :min="0" :max="360" :interval="1" />
           <p>turn: {{ turn }}</p>
@@ -78,7 +76,6 @@
           />
         </label>
         <div v-if="showHeadMotionControls">
-          <h3>Head Motion</h3>
           <p>Nod: {{ headNod }}</p>
           <vue-slider v-model="headNod" :min="-90" :max="90" :interval="1" />
           <p>turn: {{ headTurn }}</p>
