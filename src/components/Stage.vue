@@ -21,6 +21,9 @@ export default {
     "headNod",
     "headTurn",
     "headTilt",
+    "torsoBend",
+    "torsoTurn",
+    "torsoTilt",
   ],
   watch: {
     xposition(man) {
@@ -49,6 +52,15 @@ export default {
     },
     headTilt(man) {
       this.man.head.tilt(this.headTilt);
+    },
+    torsoBend(man) {
+      this.man.torso.bend(this.torsoBend);
+    },
+    torsoTurn(man) {
+      this.man.torso.turn(this.torsoTurn);
+    },
+    torsoTilt(man) {
+      this.man.torso.tilt(this.torsoTilt);
     },
   },
   mounted() {

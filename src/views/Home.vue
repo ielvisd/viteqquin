@@ -76,12 +76,33 @@
           />
         </label>
         <div v-if="showHeadMotionControls">
-          <p>Nod: {{ headNod }}</p>
+          <p>nod: {{ headNod }}</p>
           <vue-slider v-model="headNod" :min="-90" :max="90" :interval="1" />
           <p>turn: {{ headTurn }}</p>
           <vue-slider v-model="headTurn" :min="-90" :max="90" :interval="1" />
           <p>tilt: {{ headTilt }}</p>
           <vue-slider v-model="headTilt" :min="-90" :max="90" :interval="1" />
+        </div>
+      </div>
+
+      <div class="control-container">
+        <label for="toggle_button">
+          <span
+            >Torso Motion </span
+          >
+          <input
+            type="checkbox"
+            id="toggle_button"
+            v-model="torsoMotionControlValue"
+          />
+        </label>
+        <div v-if="showTorsoMotionControls">
+          <p>bend: {{ torsoBend }}</p>
+          <vue-slider v-model="torsoBend" :min="-90" :max="90" :interval="1" />
+          <p>turn: {{ torsoTurn }}</p>
+          <vue-slider v-model="torsoTurn" :min="-90" :max="90" :interval="1" />
+          <p>tilt: {{ torsoTilt }}</p>
+          <vue-slider v-model="torsoTilt" :min="-90" :max="90" :interval="1" />
         </div>
       </div>
     </div>
@@ -97,6 +118,9 @@
       :headNod="headNod"
       :headTurn="headTurn"
       :headTilt="headTilt"
+      :torsoBend="torsoBend"
+      :torsoTurn="torsoTurn"
+      :torsoTilt="torsoTilt"
     />
   </div>
   </main>
@@ -124,12 +148,16 @@ data() {
       headNod: 0,
       headTurn: 0,
       headTilt: 0,
+      torsoBend: 0,
+      torsoTurn: 0,
+      torsoTilt: 0,
       value1: "Left",
       options: ["Left", "Right"],
       test: "Stage",
       showPositionControls: false,
       showFigureControls: false,
       showHeadMotionControls: false,
+      showTorsoMotionControls: false
     };
   },
   computed: {
@@ -142,8 +170,6 @@ data() {
       },
       set(newValue) {
         this.showPositionControls = newValue;
-        this.showFigureControls = false;
-        this.showHeadMotionControls = false;
       },
     },
     figureControlsActive() {
@@ -155,8 +181,6 @@ data() {
       },
       set(newValue) {
         this.showFigureControls = newValue;
-        this.showPositionControls = false;
-        this.showHeadMotionControls = false;
       },
     },
     headMotionControlsActive() {
@@ -168,8 +192,17 @@ data() {
       },
       set(newValue) {
         this.showHeadMotionControls = newValue;
-        this.showFigureControls = false;
-        this.showPositionControls = false;
+      },
+    },
+    torsoMotionControlsActive() {
+      return this.showTorsoMotionControls;
+    },
+    torsoMotionControlValue: {
+      get() {
+        return this.showTorsoMotionControls;
+      },
+      set(newValue) {
+        this.showTorsoMotionControls = newValue;
       },
     },
   },
