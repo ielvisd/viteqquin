@@ -24,6 +24,9 @@ export default {
     "torsoBend",
     "torsoTurn",
     "torsoTilt",
+    "rightArmBend",
+    "rightArmTurn",
+    "rightArmTilt",
   ],
   watch: {
     xposition(man) {
@@ -61,6 +64,15 @@ export default {
     },
     torsoTilt(man) {
       this.man.torso.tilt(this.torsoTilt);
+    },
+    rightArmBend(man) {
+      this.man.r_arm.bend(this.rightArmBend);
+    },
+    rightArmTurn(man) {
+      this.man.r_arm.turn(this.rightArmTurn);
+    },
+    rightArmTilt(man) {
+      this.man.r_arm.tilt(this.rightArmTilt);
     },
   },
   mounted() {

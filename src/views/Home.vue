@@ -105,7 +105,31 @@
           <vue-slider v-model="torsoTilt" :min="-90" :max="90" :interval="1" />
         </div>
       </div>
+
+
+      <div class="control-container">
+        <label for="toggle_button">
+          <span
+            >Right Arm </span
+          >
+          <input
+            type="checkbox"
+            id="toggle_button"
+            v-model="rightArmValue"
+          />
+        </label>
+        <div v-if="showRightArmControls">
+          <p>bend: {{ rightArmBend }}</p>
+          <vue-slider v-model="rightArmBend" :min="-90" :max="90" :interval="1" />
+          <p>turn: {{ rightArmTurn }}</p>
+          <vue-slider v-model="rightArmTurn" :min="-90" :max="90" :interval="1" />
+          <p>tilt: {{ rightArmTilt }}</p>
+          <vue-slider v-model="rightArmTilt" :min="-90" :max="90" :interval="1" />
+        </div>
+      </div>
+
     </div>
+
     <component
       class="model"
       :is="test"
@@ -121,6 +145,9 @@
       :torsoBend="torsoBend"
       :torsoTurn="torsoTurn"
       :torsoTilt="torsoTilt"
+      :rightArmBend="rightArmBend"
+      :rightArmTilt="rightArmTilt"
+      :rightArmTurn="rightArmTurn"
     />
   </div>
   </main>
@@ -151,13 +178,17 @@ data() {
       torsoBend: 0,
       torsoTurn: 0,
       torsoTilt: 0,
+      rightArmBend: 90,
+      rightArmTurn: 0,
+      rightArmTilt: 0,
       value1: "Left",
       options: ["Left", "Right"],
       test: "Stage",
       showPositionControls: false,
       showFigureControls: false,
       showHeadMotionControls: false,
-      showTorsoMotionControls: false
+      showTorsoMotionControls: false,
+      showRightArmControls: false,
     };
   },
   computed: {
@@ -203,6 +234,17 @@ data() {
       },
       set(newValue) {
         this.showTorsoMotionControls = newValue;
+      },
+    },
+    rightArmControlsActive() {
+      return this.showRightArmControls;
+    },
+    rightArmValue: {
+      get() {
+        return this.showRightArmControls;
+      },
+      set(newValue) {
+        this.showRightArmControls = newValue;
       },
     },
   },
