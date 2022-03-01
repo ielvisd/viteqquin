@@ -2987,10 +2987,10 @@ three@^0.120:
   resolved "https://registry.npmjs.org/three/-/three-0.120.1.tgz#dbd8894f8ab87c109f1602933e7c740c98137377"
   integrity sha512-ktaCRFUR7JUZcKec+cBRz+oBex5pOVaJhrtxvFF2T7on53o9UkEux+/Nh1g/4zeb4t/pbxIFcADbn/ACu3LC1g==
 
-three@^0.124.0:
-  version "0.124.0"
-  resolved "https://registry.npmjs.org/three/-/three-0.124.0.tgz#14ab1a26ba6c56e51190e1b55695cd3c1e69ea55"
-  integrity sha512-ROXp1Ly7YyF+jC910DQyAWj++Qlw2lQv0qwYLNQwdDbjk4bsOXAfGO92wYTMPNei1GMJUmCxSxc3MjGBTS09Rg==
+three@^0.138.1:
+  version "0.138.1"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.138.1.tgz#1839757179fc4a0a933310d017394e1f3b6588f7"
+  integrity sha512-SDoBVP0zIc0f265Sc2qSOo0izme6EL+rQl+PuzzFSadLmbMpzUv6pGhyGGyKE0CGREYZXQRV2xybY1b6NY45lg==
 
 "through@>=2.2.7 <3":
   version "2.3.8"
